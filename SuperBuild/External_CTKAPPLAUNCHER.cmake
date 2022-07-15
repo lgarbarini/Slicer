@@ -3,15 +3,23 @@ if(Slicer_USE_CTKAPPLAUNCHER)
 
   set(proj CTKAPPLAUNCHER)
 
+  # Set dependency list
+  if(Slicer_USE_COMPILED_CTKAPPLAUNCHER)
+    set(${proj}_DEPENDENCIES CTKAppLauncherLib)
+    set(CTKAPPLAUNCHER_DIR ${CTKAppLauncherLib_DIR})
+    set(CTKAppLauncher_DIR ${CTKAppLauncherLib_DIR})
+  else()
+    set(${proj}_DEPENDENCIES "")
+  endif()
+
   # Sanity checks
   if(DEFINED CTKAPPLAUNCHER_DIR AND NOT EXISTS ${CTKAPPLAUNCHER_DIR})
     message(FATAL_ERROR "CTKAPPLAUNCHER_DIR variable is defined but corresponds to nonexistent directory")
   endif()
 
   # Set dependency list
-  set(${proj}_DEPENDENCIES "")
   if(WIN32)
-    set(${proj}_DEPENDENCIES CTKResEdit)
+    set(${proj}_DEPENDENCIES CTKResEdit ${proj}_DEPENDENCIES)
   endif()
 
   # Include dependent projects if any

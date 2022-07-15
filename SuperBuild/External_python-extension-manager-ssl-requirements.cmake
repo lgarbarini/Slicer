@@ -41,10 +41,12 @@ if(NOT Slicer_USE_SYSTEM_${proj})
   #  - wrapt-1.13.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl
   #  - wrapt-1.13.3-cp39-cp39-musllinux_1_1_x86_64.whl
   #  - wrapt-1.13.3-cp39-cp39-win_amd64.whl
+  #  - wrapt-1.13.3.tar.gz
   wrapt==1.13.3 --hash=sha256:981da26722bebb9247a0601e2922cedf8bb7a600e89c852d063313102de6f2cb \
                 --hash=sha256:25b1b1d5df495d82be1c9d2fad408f7ce5ca8a38085e2da41bb63c914baadff7 \
                 --hash=sha256:865c0b50003616f05858b22174c40ffc27a38e67359fa1495605f96125f76640 \
-                --hash=sha256:81bd7c90d28a4b2e1df135bfbd7c23aee3050078ca6441bead44c42483f9ebfb
+                --hash=sha256:81bd7c90d28a4b2e1df135bfbd7c23aee3050078ca6441bead44c42483f9ebfb \
+                --hash=sha256:1fea9cd438686e6682271d36f3481a9f3636195578bab9ca3382e2f5f01fc185
   # [/wrapt]
   # [Deprecated]
   Deprecated==1.2.13 --hash=sha256:64756e3e14c8c5eea9795d93c524551432a0be75629f8f29e67ab8caf076c76d
